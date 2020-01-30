@@ -13,87 +13,111 @@ The GitHub flow is branch-based workflow built around core Git commands used by 
 
 ### GitHub and the command line:
 
-Example: Contribute to an existing repository
+##### Example: Contribute to an existing repository
 
-# download a repository on GitHub.com to our machine
-git clone https://github.com/me/repo.git
+- download a repository on GitHub.com to our machine
 
-# change into the `repo` directory
-cd repo
+`git clone https://github.com/me/
+repo.git`
 
-# create a new branch to store any new changes
-git branch my-branch
+- change into the `repo` directory
 
-# switch to that branch (line of development)
-git checkout my-branch
+`cd repo`
 
-# make changes, for example, edit `file1.md` and `file2.md` using the text editor
+- create a new branch to store any new changes
 
-# stage the changed files
-git add file1.md file2.md
+`git branch my-branch`
 
-# take a snapshot of the staging area (anything that's been added)
-git commit -m "my snapshot"
+- switch to that branch (line of development)
 
-# push changes to github
-git push --set-upstream origin my-branch
+`git checkout my-branch`
 
-Example: Start a new repository and publish it to GitHub
+- make changes, for example, edit `file1.md` and `file2.md` using the text editor
 
-First, you will need to create a new repository on GitHub. You can learn how to create a new repository in our Hello World guide. Do not initialize the repository with a README, .gitignore or License. This empty repository will await your code.
+- stage the changed files
 
-# create a new directory, and initialize it with git-specific functions
-git init my-repo
+`git add file1.md file2.md`
 
-# change into the `my-repo` directory
-cd my-repo
+- take a snapshot of the staging area (anything that's been added)
 
-# create the first file in the project
-touch README.md
+`git commit -m "my snapshot"`
 
-# git isn't aware of the file, stage it
-git add README.md
+- push changes to github
 
-# take a snapshot of the staging area
-git commit -m "add README to initial commit"
+`git push --set-upstream origin my-
+branch`
+<hr>
 
-# provide the path for the repository you created on github
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+##### Example: Start a new repository and publish it to GitHub
 
-# push changes to github
-git push --set-upstream origin master
+First, you will need to create a new repository on GitHub.
+
+- create a new directory, and initialize it with git-specific functions
+
+  `git init my-repo`
+
+- change into the `my-repo` directory
+
+  `cd my-repo`
+
+- create the first file in the project
+
+  `touch README.md`
+
+- git isn't aware of the file, stage it
+
+  `git add README.md`
+
+- take a snapshot of the staging area
+
+  `git commit -m "add README to initial commit"`
+
+- provide the path for the repository you created on github
+
+  `git remote add origin https://github.com/YOUR-USERNAME/YOUR-
+  REPOSITORY.git`
+
+- push changes to github
+
+  `git push --set-upstream origin master`
+---
 
 Example: contribute to an existing branch on GitHub
 
-# assumption: a project called `repo` already exists on the machine, and a new branch has been pushed to GitHub.com since the last time changes were made locally
+> assumption: a project called `repo` already exists on the machine, and a new branch has been pushed to GitHub.com since the last time changes were made locally
 
-# change into the `repo` directory
-cd repo
+- change into the `repo` directory
 
-# update all remote tracking branches, and the currently checked out branch
-git pull
+  `cd repo`
 
-# change into the existing branch called `feature-a`
-git checkout feature-a
+- update all remote tracking branches, and the currently checked out branch
 
-# make changes, for example, edit `file1.md` using the text editor
+  `git pull`
 
-# stage the changed file
-git add file1.md
+- change into the existing branch called `feature-a`
 
-# take a snapshot of the staging area
-git commit -m "edit file1"
+  `git checkout feature-a`
 
-# push changes to github
-git push
+- make changes, for example, edit `file1.md` using the text editor.
 
-Models for collaborative development
+- stage the changed file
+
+  `git add file1.md`
+
+- take a snapshot of the staging area
+
+  `git commit -m "edit file1"`
+
+- push changes to github
+
+  `git push`
+
+### Models for collaborative development
 
 There are two primary ways people collaborate on GitHub:
+- Shared repository
+- Fork and pull
 
-    Shared repository
-    Fork and pull
+With a shared repository, individuals and teams are explicitly designated as contributors with read, write, or administrator access.
 
-With a shared repository, individuals and teams are explicitly designated as contributors with read, write, or administrator access. This simple permission structure, combined with features like protected branches and Marketplace, helps teams progress quickly when they adopt GitHub.
-
-For an open source project, or for projects to which anyone can contribute, managing individual permissions can be challenging, but a fork and pull model allows anyone who can view the project to contribute. A fork is a copy of a project under an developer’s personal account. Every developer has full control of their fork and is free to implement a fix or new feature. Work completed in forks is either kept separate, or is surfaced back to the original project via a pull request. There, maintainers can review the suggested changes before they’re merged. See the Forking Projects Guide for more information.
+For an open source project, or for projects to which anyone can contribute, managing individual permissions can be challenging, but a fork and pull model allows anyone who can view the project to contribute.<strong> A fork is a copy of a project under an developer’s personal account</strong>. Every developer has full control of their fork and is free to implement a fix or new feature. Work completed in forks is either kept separate, or is surfaced back to the original project via a pull request. There, maintainers can review the suggested changes before they’re merged. See the Forking Projects Guide for more information.
